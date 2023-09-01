@@ -10,7 +10,6 @@ public class Homework_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
         System.out.println("Task 1 Comparison Solution");
         printComparisonNumbersResult(scanner);
         System.out.println("-----------------------------------------------------");
@@ -58,9 +57,7 @@ public class Homework_1 {
         orderChekResult(scanner);
         System.out.println("-----------------------------------------------------");
 
-
         scanner.close();
-
     }
 
     public static void printComparisonNumbersResult(Scanner scanner) {
