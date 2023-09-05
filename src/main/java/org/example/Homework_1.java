@@ -64,27 +64,27 @@ public class Homework_1 {
 
     public static void printComparisonNumbersResult(Scanner scanner) {
 
-        double A = 0;
-        double B = 0;
-        double C = 0;
+        double a = 0;
+        double b = 0;
+        double c = 0;
         boolean validInput = false;
 
         try {
             System.out.print("Enter A: ");
-            A = scanner.nextDouble();
+            a = scanner.nextDouble();
 
             System.out.print("Enter B: ");
-            B = scanner.nextDouble();
+            b = scanner.nextDouble();
 
             System.out.print("Enter C: ");
-            C = scanner.nextDouble();
+            c = scanner.nextDouble();
 
-            if (C > A && C < B) {
-                System.out.println(C + " is between " + A + " and " + B);
-            } else if (C < A && C > B) {
-                System.out.println(C + " is between " + A + " and " + B);
+            if (c > a && c < b) {
+                System.out.println(c + " is between " + a + " and " + b);
+            } else if (c < a && c > b) {
+                System.out.println(c + " is between " + a + " and " + b);
             } else {
-                System.out.println(C + " is not between " + A + " and " + B);
+                System.out.println(c + " is not between " + a + " and " + b);
             }
         } catch (InputMismatchException e) {
             System.out.println("Input should be integer.");
@@ -205,25 +205,25 @@ public class Homework_1 {
 
 
     public static void swapNumbersResult(Scanner scanner) {
-        int A, B, C;
+        int a, b, c;
 
         System.out.print("Enter integer number A: ");
-        A = scanner.nextInt();
+        a = scanner.nextInt();
 
         System.out.print("Enter integer number B: ");
-        B = scanner.nextInt();
+        b = scanner.nextInt();
 
         System.out.print("Enter integer number C: ");
-        C = scanner.nextInt();
+        c = scanner.nextInt();
 
-        System.out.println("Before swapping: " + A + "," + B + "," + C);
+        System.out.println("Before swapping: " + a + "," + b + "," + c);
 
-        int temp = A;
-        A = B;
-        B = C;
-        C = temp;
+        int temp = a;
+        a = b;
+        b = c;
+        c = temp;
 
-        System.out.println("After swapping: " + A + "," + B + "," + C);
+        System.out.println("After swapping: " + a + "," + b + "," + c);
 
     }
 
