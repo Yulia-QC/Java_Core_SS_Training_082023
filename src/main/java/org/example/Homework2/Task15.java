@@ -20,7 +20,7 @@ public class Task15 {
                 if (b < 10) {
                     System.out.print("; ");
                 } else {
-                    System.out.println();
+                    System.out.println(";");
                 }
             }
         }

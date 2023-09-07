@@ -24,6 +24,7 @@ public class Task19 {
         } else {
             int first = 0;
             int second = 1;
+            System.out.print(first);
             if (number > 1) {
                 System.out.print(", " + second);
                 for (int i = 2; i < number; i++) {

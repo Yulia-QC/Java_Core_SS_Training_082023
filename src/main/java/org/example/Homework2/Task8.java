@@ -24,7 +24,7 @@ public class Task8 {
         } else {
             System.out.println("Numbers divisible by 3: ");
 
-            for (int i = 1; a > 0; i++) {
+            for (int i = 3; a > 0; i+=3) {
                 if (i % 3 == 0) {
                     System.out.println(i);
                     a--;

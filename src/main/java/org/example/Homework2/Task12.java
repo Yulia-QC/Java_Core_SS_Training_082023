@@ -6,7 +6,7 @@ have the same digits.
  */
 public class Task12 {
     public static void main(String[] args) {
-        for (int i = 100; i <= 999; i++) {
+        for (int i = 102; i <= 987; i++) {
             int digit1 = i % 10;
             int digit2 = (i / 10) % 10;
             int digit3 = (i / 100) % 10;

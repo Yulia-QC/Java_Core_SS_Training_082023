@@ -14,16 +14,22 @@ public class Task10 {
         System.out.print("Enter a positive number: ");
         int n = sc.nextInt();
 
-        for (int i = 2; i <= n / 2; i++) {
-            if (n % i == 0) {
-                System.out.println(n + " is not a prime number.");
-                break;
-            }
-        }
-        if (n == 0 || n == 1) {
+        if (n <= 1) {
             System.out.println(n + " is not a prime number.");
         } else {
-            System.out.println(n + " is the prime number!");
+            boolean isPrime = true;
+
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                System.out.println(n + " is a prime number.");
+            } else {
+                System.out.println(n + " is not a prime number!");
+            }
         }
     }
 }
