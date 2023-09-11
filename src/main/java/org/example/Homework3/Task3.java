@@ -28,8 +28,9 @@ public class Task3 {
         int b = sc.nextInt();
 
         int arr1[] = new int[10];
-        arr1[0] = a;
-        arr1[1] = b;
+        arr1[0] = a*3;
+        arr1[1] = b/2;
+
         for (int i = 2; i < arr1.length; i++) {
             if (i % 2 == 0) {
                 arr1[i] = (arr1[i - 2] + arr1[i - 1]) * 3;
