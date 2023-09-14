@@ -24,23 +24,27 @@ public class Task5 {
         System.out.print("Enter a word: ");
         String word = sc.next();
 
-        boolean isPalindrome = true;
+//        boolean isPalindrome = true;
 
-        int left = 0;
-        int right = word.length() - 1;
+//        int left = 0;
+//        int right = word.length() - 1;
+//
+//        while (left < right) {
+//            if (word.charAt(left) != word.charAt(right)) {
+//                isPalindrome = false;
+//            }
+//            left++;
+//            right--;
+//        }
+        String reversed = new StringBuilder(word).reverse().toString();
+        boolean isPalindrome = word.equals(reversed);
 
-        while (left < right) {
-            if (word.charAt(left) != word.charAt(right)) {
-                isPalindrome = false;
-            }
-            left++;
-            right--;
-        }
         if (isPalindrome) {
             System.out.println(word + " is palindrome.");
         } else {
             System.out.println(word + " is not a palindrome.");
         }
+
         sc.close();
 
     }
