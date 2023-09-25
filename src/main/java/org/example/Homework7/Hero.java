@@ -92,5 +92,12 @@ public class Hero {
         strength = Math.min(strength + (new Random().nextInt(6 - 3) + 3), maxStrength);
     }
 
+    public int getHeroRandomHealth(int heroLevel) {
+        return (new Random().nextInt(101) + 100) * heroLevel;
+    }
+    public int getHeroRandomLevel() {
+        return(new Random().nextInt(4)) + 4;
+    }
+
 
 }

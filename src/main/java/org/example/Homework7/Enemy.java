@@ -1,5 +1,7 @@
 package org.example.Homework7;
 
+import java.util.Random;
+
 public class Enemy {
     int health;
     int strength;
@@ -46,4 +48,9 @@ public class Enemy {
         }
     }
 
-}
+    public int getRandomEnemyStrength(int heroLevel) {
+        return (new Random().nextInt(3) + 8) * heroLevel;
+    }
+
+    }
+

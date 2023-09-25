@@ -9,23 +9,24 @@ public class HeroDemo {
         int heroRandomStrength = new Random().nextInt(6) + 5;
 
         Hero optimusPrime = new Hero("Optimus Prime", 100, heroRandomStrength, 0, 1);
-
-        ArrayList<Enemy> enemies = new ArrayList<>();
+        Enemy enemy = new Enemy();
 
         int interactions = 0;
 
+
         while (interactions < 10) {
-            int enemyRandomStrength = new Random().nextInt(3) + 8;
-            int randomHealth = new Random().nextInt(101) + 100;
-            int heroRandomLevel = new Random().nextInt(4) + 4;
-            int enemyRandomLevel = new Random().nextInt(1) + heroRandomLevel;
-            Enemy enemy = new Enemy(randomHealth, enemyRandomStrength, enemyRandomLevel);
-            enemies.add(enemy);
+            int heroLevel = optimusPrime.getLevel();
+            int enemyRandomStrength = (int) (enemy.getRandomEnemyStrength(heroLevel)*0.10);
+            int heroRandomHealth = optimusPrime.getHeroRandomHealth(heroLevel);
+            int heroRandomLevel = optimusPrime.getHeroRandomLevel();
+            int enemyRandomLevel = new Random().nextInt(optimusPrime.getLevel()) + 1;
+            enemy = new Enemy(heroRandomLevel, enemyRandomStrength, enemyRandomLevel);
+
 
             boolean heroStarts = Math.random() <= 0.5;
 
             if (heroStarts) {
-                if (enemyRandomLevel > heroRandomLevel) {
+                if (enemy.getLevel() > optimusPrime.getLevel()) {
                     optimusPrime.avoid(enemy);
                 } else {
                     optimusPrime.attack(enemy);
