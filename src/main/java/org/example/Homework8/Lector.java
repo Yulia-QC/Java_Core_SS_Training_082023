@@ -2,7 +2,8 @@ package org.example.Homework8;
 
 public class Lector extends Person {
     private double dailySalary;
-    private int workingHours = 8;
+    public static final int WORKING_DAY_IN_HOURS = 8;
+    public static final int EXPERIENCED_LECTOR_MIN_AGE = 30;
 
     public Lector(String firstName, String lastName, int age, String gender, double dailySalary) {
         super(firstName, lastName, age, gender);
@@ -20,8 +21,8 @@ public class Lector extends Person {
 
     public double calculateOvertime(double hours) {
 
-            if (getAge() > 30) {
-                double overtimePay = hours * ((dailySalary / workingHours) * 2);
+            if (getAge() > EXPERIENCED_LECTOR_MIN_AGE) {
+                double overtimePay = hours * ((dailySalary / WORKING_DAY_IN_HOURS) * 2);
                 return overtimePay;
             } else {
                 return 0;
