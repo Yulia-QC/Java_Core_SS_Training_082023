@@ -3,6 +3,11 @@ package org.example.Homework8;
 public class Student extends Person {
     private double grade;
 
+
+    public Student(String firstName, String lastName, int age, String gender) {
+        super(firstName, lastName, age, gender);
+    }
+
     public Student(String firstName, String lastName, int age, String gender, double grade) {
         super(firstName, lastName, age, gender);
         this.grade = grade;
