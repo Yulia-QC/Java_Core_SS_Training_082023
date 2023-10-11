@@ -18,6 +18,7 @@ public class Student {
                 score += fileScore;
             } catch (InvalidFileNameException e) {
                 System.out.println("Error for student " + name + ": " + e.getMessage());
+                score = -1;
             }
         }
     }
